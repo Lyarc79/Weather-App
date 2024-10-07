@@ -56,6 +56,7 @@ button:hover{
 }
 
 #weatherDisplay{
+    display: none;
     background-color: #CBD2FA;
     border: 1px solid #727272;
     color: #333333;
@@ -64,6 +65,11 @@ button:hover{
     width: 400px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#weatherDisplay.visible {
+    display: block;
+    opacity: 1;
 }
 
 #weatherDisplay h2,
@@ -181,5 +187,3 @@ button:hover{
 .toggleTempButton:hover{
     background-color: #333333;
 }
-
-

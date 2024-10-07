@@ -54,6 +54,7 @@ weatherForm.addEventListener('submit', async function(event) {
 
     if (locationInput) {
         loadingElement.style.display = 'block';
+        weatherDisplay.classList.remove('visible');
         try{
             const weatherData = await fetchWeather(locationInput);
             displayWeather(weatherData);
@@ -91,6 +92,7 @@ function displayWeather(data) {
         </div>
         `;
     }).join('');
+    weatherDisplay.classList.add('visible');
 }
 
 toggleTempButton.addEventListener('click', () =>{
