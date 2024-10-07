@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form id="weatherForm">
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter city name" autocomplete="off" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="weatherDisplay">
+        <div class="display-item1">
+            <h2 id="locationName">City</h2>
+            <p id="temperature">Temp</p>
+        </div>
+        <div class="display-item2">
+            <img id="weatherImage" alt="${description}" class="weather-icon">
+            <p id="weatherDescription"> Description</p
+        </div>
+        
+        <div class="display-item3">
+            <img id="windIcon" alt="Wind Icon" class="property-icon">
+            <div class="detail-item">
+                <p id="windSpeed"></p>
+                <p class="detail-label">Wind Speed</p>
+            </div>
+            <img id="rainIcon" alt="Rain Icon" class="property-icon">
+            <div class="detail-item">
+                <p id="rainChance"></p>
+                <p class="detail-label">Rain Chance</p>
+            </div>
+        </div>
+        <div class="display-item4">
+            <p>24h forecast</p>
+            <div class="forecast-slider" id="forecastSlider"></div>
+        </div>
+        <button id="toggleTempButton" class="toggleTempButton">Switch to Celsius</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
